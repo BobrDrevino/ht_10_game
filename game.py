@@ -86,7 +86,6 @@ mag.get_level_up()
 mag.damage()
 print(mag)
 
-
 archer = Archer(name='Eyeless')
 archer.get_level_up()
 archer.healing()
