@@ -26,7 +26,7 @@ class Unit:
 class Mage(Unit):
     def __init__(self, name, health=100, power=1, agility=1, intellect=1):
         super().__init__(name=name, health=health, power=power, agility=agility, intellect=intellect)
-        self.mage_type = random.choice(['Fire', 'Air', 'Water'])
+        self.mage_type = random.choice(['fire', 'air', 'water'])
 
     def __str__(self):
         str1 = super().__str__()
@@ -34,12 +34,6 @@ class Mage(Unit):
 
     def get_level_up(self):
         self.intellect += 1 if self.intellect < 10 else 0
-
-    def healing(self):
-        super().healing()
-
-    def damage(self):
-        super().damage()
 
 
 class Archer(Unit):
@@ -54,12 +48,6 @@ class Archer(Unit):
     def get_level_up(self):
         self.agility += 1 if self.agility < 10 else 0
 
-    def healing(self):
-        super().healing()
-
-    def damage(self):
-        super().damage()
-
 
 class Knight(Unit):
     def __init__(self, name, health=100, power=1, agility=1, intellect=1):
@@ -72,12 +60,6 @@ class Knight(Unit):
 
     def get_level_up(self):
         self.power += 1 if self.power < 10 else 0
-
-    def healing(self):
-        super().healing()
-
-    def damage(self):
-        super().damage()
 
 
 mag = Mage(name="Dumbledore")
